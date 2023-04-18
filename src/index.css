@@ -1,13 +1,65 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+:root{
+  /*---------------COLORS---------------*/
+  --color2: #3b3b3b;
+  --color3: #fff8e5;
+  --color4: #fdf6ef;
+
+  /*---------------COLORS NOOTEBOOK---------------*/
+  --color5: #724e41;
+  --color6: #835f53;
+  --color7: #9d7c49;
+  --color8: #fbead8;
+  --color9: #bad3e9;
+  --color10:#fde297;
+  --color11:#fdb797;
+  --color12:#beddc2;
+  --color13:#d8fbea; /*#d3e9ba /*#bae9e8
+
+  /*---------------COLORS FINISH AND DELETE---------------*/
+  --color14:#008000;
+  --color15:#ff4d4f;
+
+  /*---------------SHADOW-BOX---------------*/
+  --color-shadow:rgba(0,0,0,0.2);
+  --color-shadow-stick:rgba(0,0,0,0.05);
+
+  /*---------------FONTS---------------*/
+  --font-pacifico: 'Pacifico', cursive;
+
+
+   /*---------------FONT WEIGHT---------------*/
+  --light: 300;
+  --regular: 400;
+  --medium: 500;
+  --bold: 700;
+
+   /*---------------FONT-SIZE---------------*/
+   --title-size: max(2rem, 24px); /*Tamanho de 2rem (32px se for font-size:16px) e 24px se ele for menor que 24px;*/ 
+   --subtitle-size: max(1.375rem, 16px); /*Tamanho de 1.375rem (22px se for font-size:16px) e 16px se ele for menor que 16px;*/ 
+   --body-size: max(1rem, 12px);
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--color13);
+  font-family: Arial, sans-serif;
+  font-size: max(1vw, 16px); /* Isso faz com que a fonte tenha um tamanho de 1vw, mas se isso for menor que 16px, então a fonte terá tamanho de 16px*/
+  color: var(--color2);
+}
+
+/*---------------RESPONSIVIDADE TAMANHO DAS FONTES-------------------*/
+
+@media(max-width: 768px){
+  html {
+    font-size: 12px; 
+  }
 }
