@@ -100,8 +100,8 @@ function AppBody() {
   } else{
     return(
       <Routes>
-        <Route path="/to-do-list" element={<Login />} />
-        <Route path="*" element={<Navigate to="/to-do-list" />} />
+        <Route path="/" element={<Login />} />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     );
   }

@@ -87,7 +87,7 @@ export default function CreateAccount() {
             </form>
 
             <div className="createAccountLink">
-            Tem uma conta? <Link to={'/to-do-list'} >Conecte-se </Link>
+            Tem uma conta? <Link to={'/'} >Conecte-se </Link>
             </div>
         </div>
     );

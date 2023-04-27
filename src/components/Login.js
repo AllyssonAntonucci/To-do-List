@@ -56,7 +56,7 @@ export default function Login() {
                 localStorage.setItem('uid', user.user.uid); // armazena o uid do objeto user no localStorage, iremos trazer ele de volta em outro componente para verificar se o usuário está logado
                 //console.log(user.user.uid);
                 localStorage.setItem('email', user.user.email); // armazena o email do user no localStorage, iremos trazer ele de volta no componente AppBody pra mostrar o email do usuário logado
-                navigate('/to-do-list/App');
+                navigate('/App');
                 
         } catch (error) {
             alert("Email ou senha incorretos. Tente novamente!");
@@ -105,11 +105,11 @@ export default function Login() {
             </form>
 
             <div className="forgotPassword">
-            <Link to={'/to-do-list/ForgotPassword'}>Esqueceu a senha? </Link>
+            <Link to={'/ForgotPassword'}>Esqueceu a senha? </Link>
             </div>
 
             <div className="createAccountLink">
-            Não possui uma conta? <Link to={'/to-do-list/CreateAccount'}>Cadastre-se </Link>
+            Não possui uma conta? <Link to={'/CreateAccount'}>Cadastre-se </Link>
             </div>
             
         
@@ -119,8 +119,8 @@ export default function Login() {
     } else {
         return(
             <Routes>
-                <Route path="/to-do-list/App" element={<AppBody />} />
-                <Route path="*" element={<Navigate to="/to-do-list/App" />} />
+                <Route path="/App" element={<AppBody />} />
+                <Route path="*" element={<Navigate to="/App" />} />
             </Routes> 
         );
     }

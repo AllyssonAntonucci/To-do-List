@@ -44,7 +44,7 @@ export default function ForgotPassword() {
             </form>
 
             <div className="back">
-            <Link to={'/to-do-list'}>Voltar </Link>
+            <Link to={'/'}>Voltar </Link>
             </div>
         </div>
 

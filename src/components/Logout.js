@@ -20,7 +20,7 @@ function Logout() {
         await signOut(auth);
         localStorage.removeItem('uid');
         localStorage.removeItem('email');
-        navigate('/to-do-list');
+        navigate('/');
     };
 
     

@@ -8,24 +8,26 @@ import AppBody from './components/AppBody';
 import CreateAccount from './components/CreateAccount';
 import ForgotPassword from './components/ForgotPassword';
 
-const router = createBrowserRouter([
+const routes = [
   {
-    path: "/to-do-list/App",
+    path: "/App",
     element: <AppBody />,
   },
   {
-    path: "/to-do-list/CreateAccount",
+    path: "/CreateAccount",
     element: <CreateAccount />,
   },
   {
-    path: "/to-do-list/ForgotPassword",
+    path: "/ForgotPassword",
     element: <ForgotPassword />,
   },  
   {
-    path: "/to-do-list",
+    path: "/",
     element: <App />,
   }
-]);
+];
+
+const router = createBrowserRouter(routes, { basename: '/to-do-list' });
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
