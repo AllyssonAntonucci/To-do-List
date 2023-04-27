@@ -14,6 +14,7 @@ export default function Todo({
           return "#e1d2c2"; // cor da conclusão
         } else {
           return todo.color; // cor que o usuário escolheu no form
+
         }
       };
 

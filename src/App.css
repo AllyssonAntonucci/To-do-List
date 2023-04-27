@@ -37,7 +37,7 @@
   background-color: var(--color8);
   border-radius: .3rem;
   margin: 1rem auto;
-  padding: 0 1rem;
+  padding: 0 1rem 1rem 1rem;
   box-shadow: 10px 5px 5px var(--color-shadow);
   
   
@@ -105,15 +105,27 @@
 }
 
 .btn-container button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: .5rem;
   padding: .3rem;
   background-color: var(--color11);
   width: 100%;
   cursor: pointer;
-  margin-bottom: 1rem;
   box-shadow: 10px 5px 5px var(--color-shadow);
   font-size: var(--body-size);
 
+}
+
+
+.loading-container{
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
 }
 
 .list-todo{
@@ -210,17 +222,142 @@
 
 }
 
+/*---------------TELA DE LOGIN-------------------*/
+.Login{
+  position: absolute;
+  width: 40vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: var(--color8);
+  box-shadow: 10px 5px 5px var(--color-shadow);
+}
+
+.Login h1{
+  font-family: var(--font-pacifico);
+  text-align: center;
+}
+
+.Login p{
+  padding: 1rem;
+  text-align: center;
+}
+
+.createAccountLink{
+  font-size: calc(0.75*var(--body-size));
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.createAccountLink a{
+  text-decoration: none;
+  color: #5799f7;
+  
+}
+
+.forgotPassword{
+  margin-top: 1rem;
+  text-align: center;
+  
+
+}
+
+.forgotPassword a{
+  text-decoration: none;
+  font-size: calc(0.75*var(--body-size));
+  color: #5799f7;
+}
+
+.back{
+  margin-top: 1rem;
+}
+
+.back a{
+  text-decoration: none;
+  color: var(--color2);
+  
+}
+
+/*---------------RESPONSIVIDADE TELA DE LOGIN-------------------*/
+@media(max-width: 768px) {
+  .Login{
+    width: 80vw;
+    
+  }
+
+  .createAccountLink{
+    font-size: var(--body-size);
+    margin-top: 2rem;
+  }
+
+  .forgotPassword{
+    margin-top: 2rem;
+    
+  }
+
+  .forgotPassword a{
+    font-size: var(--body-size);
+    
+  }
+
+  .back{
+    margin-top: 2rem;
+  }
+}
+
+
+
+
+
+
+/*---------------EMAIL DO USUÁRIO E LOG OUT-------------------*/
+
+.logged{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--color8);
+  padding: .5rem .5rem 0 .5rem ;
+  text-align: center;
+  font-size: calc(0.75*var(--body-size));
+ 
+}
+
+
+.logged button{
+  display: flex;
+  justify-content: center;
+  width: 4rem;
+  border-radius: .5rem;
+  padding: .3rem;
+  margin-top: .5rem;
+  background-color: var(--color11);
+  cursor: pointer;
+  box-shadow: 10px 5px 5px var(--color-shadow);
+  font-size: var(--body-size);
+}
+
 
 .carregando{
-  font-size: calc(1.5*var(--title-size));
+  width: 100vw;
+  height: 100vh;
+  font-size: var(--title-size);
   font-family: var(--font-pacifico);
-  color: #6568b8;
+  color: var(--color2);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
   text-align: center;
   text-shadow: 10px 5px 7px var(--color-shadow);
+}
+
+
+.NotebookAnimation {
+  
+  margin-left: 200rem; /* ajuste a quantidade de pixels conforme necessário */
 }
 
 /*---------------SCROLL BAR-------------------*/

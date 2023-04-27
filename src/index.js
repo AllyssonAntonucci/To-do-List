@@ -1,13 +1,36 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {createBrowserRouter, RouterProvider} from 'react-router-dom';
+import App from './App';
+import AppBody from './components/AppBody';
+import CreateAccount from './components/CreateAccount';
+import ForgotPassword from './components/ForgotPassword';
+
+const router = createBrowserRouter([
+  {
+    path: "/to-do-list/App",
+    element: <AppBody />,
+  },
+  {
+    path: "/to-do-list/CreateAccount",
+    element: <CreateAccount />,
+  },
+  {
+    path: "/to-do-list/ForgotPassword",
+    element: <ForgotPassword />,
+  },  
+  {
+    path: "/to-do-list",
+    element: <App />,
+  }
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
